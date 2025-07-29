@@ -3,7 +3,7 @@ import 'package:widget_app/widgets.dart';
 
 void main(){
   runApp(MaterialApp(
-    home: HomePage(),
+    home: const HomePage(),
     theme: ThemeData.dark(),
     debugShowCheckedModeBanner: false,
   ));
@@ -40,8 +40,11 @@ class _HomePage extends State<HomePage>{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        // leading: Padding(padding: const EdgeInsets.all(10),
+        // child: Image.asset("assets/syntexalogo.png"),
+        // ),
         centerTitle: true,
-        title: Text("Syntexa Widget Guide"),
+        title: const Text("Syntexa Widget Guide"),
         backgroundColor: Colors.grey.shade800,
       ),
       drawer: Drawer(
@@ -50,10 +53,26 @@ class _HomePage extends State<HomePage>{
           children: [
             DrawerHeader(
               decoration: BoxDecoration(color: Colors.grey.shade800),
-                child: Center(child: Text("Widget Vault",
-                  style:TextStyle(
-                    fontSize: 24,
-                  ) ,))),
+                child: Column(
+                  children:[
+                    Container(
+                      height: 75,
+                      width: 75,
+                      decoration: const BoxDecoration(
+                        shape: BoxShape.rectangle,
+                        borderRadius: BorderRadius.horizontal(),
+                      ),
+                      clipBehavior: Clip.hardEdge,
+                      child: Image.asset("assets/syntexalogo.png",
+                        fit: BoxFit.cover,),
+                    ),
+                    const Center(child: Text("Widget Vault",
+                    style:TextStyle(
+                      fontSize: 24,
+                    ) ,)),
+                ],
+    ),
+    ),
             ...widgetDatabase.keys.map((widgetName){
               return ListTile(
                 title: Center(child: Text(widgetName)),
@@ -69,25 +88,30 @@ class _HomePage extends State<HomePage>{
           ],
         ),
       ),
-      body: Padding(padding: EdgeInsets.fromLTRB(10, 40, 10, 10),
+      body: Padding(padding: const EdgeInsets.fromLTRB(20, 20, 20, 10),
       child:SingleChildScrollView(
         child: Column(
             children: [
               Column(
                 children: [
-                  Text("Welcome to Flutter Syntexa!",style: TextStyle(
+                  Image.asset("assets/syntexalogo.png",
+                  height: 70,width: 70,),
+                  const SizedBox(height: 10,),
+                  const Text("Welcome to Flutter Syntexa!",style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
                   ),),
-                  Text("Unlock the power of Flutter widgets with smart, searchable syntax guidance. Whether you're a beginner or pro, Syntexa helps you build with clarity and speed.",
+                  const Text("Unlock the power of Flutter widgets with smart, searchable syntax guidance. Whether you're a beginner or pro, Syntexa helps you build with clarity and speed.",
                   style: TextStyle(
                     fontSize: 14,
+                    wordSpacing: 2,
+                    letterSpacing: 1.5
                   ),),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 30),
                   TextField(
                     controller: widgetNameController,
-                    decoration: InputDecoration(
-                      label: Text("Enter widget name"),
+                    decoration: const InputDecoration(
+                      label: Text("Enter widget name e.g.,Container"),
                       border: OutlineInputBorder(),
                       suffixIcon: Icon(Icons.search)
                     ),
@@ -96,36 +120,37 @@ class _HomePage extends State<HomePage>{
                       fetchWidget(value);
                     },
                   ),
+                  const SizedBox(height: 10,),
                   ElevatedButton(onPressed: () =>
                     fetchWidget(widgetNameController.text),
-                  child: Text("Syntax"),
+                  child: const Text("Search"),
                   ),
-                  SizedBox(height: 20,),
+                  const SizedBox(height: 20,),
                   if(syntaxResult!=null && syntaxResult!.isNotEmpty)
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text("Description:",
+                          const Text("Description:",
                             style: TextStyle(fontWeight: FontWeight.bold,
                                 fontSize: 18),
                           ),
                           Text(descriptionResult ?? "",
-                              style: TextStyle(fontSize: 16)),
-                          SizedBox(height: 20),
-                          Text(
+                              style: const TextStyle(fontSize: 16)),
+                          const SizedBox(height: 20),
+                          const Text(
                             "Syntax:",
                             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
                           ),
                           Container(
                             width: double.infinity,
-                            padding: EdgeInsets.all(12),
-                            margin: EdgeInsets.only(top: 10),
+                            padding: const EdgeInsets.all(12),
+                            margin: const EdgeInsets.only(top: 10),
                             color: Colors.grey.shade900,
                             child: SingleChildScrollView(
                               scrollDirection: Axis.vertical,
                               child: SelectableText(
                                 syntaxResult ?? "",
-                                style: TextStyle(fontFamily: 'Courier',
+                                style: const TextStyle(fontFamily: 'Courier',
                                     fontSize: 14,
                                 color: Colors.white),
                               ),
