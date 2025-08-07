@@ -22,17 +22,20 @@ class _HomePage extends State<HomePage>{
 
   void fetchWidget(String widgetName){
     final key = widgetName.toLowerCase().trim();
-    final result = widgetDatabase[key];
-
-    setState(() {
-      if(result!=null){
-        syntaxResult = result["syntax"];
-        descriptionResult = result["description"];
+    for (var category in groupedWidgets.values){
+      for(var entry in category.entries) {
+        if (entry.key.toLowerCase() == key) {
+          setState(() {
+            syntaxResult = entry.value["syntax"];
+            descriptionResult = entry.value["description"];
+          });
+          return;
+        }
       }
-      else{
+    }
+    setState(() {
         syntaxResult = "Widget not found in Database";
         descriptionResult = "";
-      }
     });
   }
 
@@ -73,18 +76,23 @@ class _HomePage extends State<HomePage>{
                 ],
     ),
     ),
-            ...widgetDatabase.keys.map((widgetName){
-              return ListTile(
-                title: Center(child: Text(widgetName)),
-                onTap: (){
-                  Navigator.pop(context);
-                  fetchWidget(widgetName);
-                  setState(() {
-                    widgetNameController.text=widgetName;
-                  });
-                },
+            ...groupedWidgets.entries.map((category){
+              return ExpansionTile(
+                title: Text(category.key),
+                children: category.value.keys.map((widgetName){
+                   return ListTile(
+                    title: Center(child: Text(widgetName)),
+                    onTap: () {
+                      Navigator.pop(context);
+                      fetchWidget(widgetName);
+                      setState(() {
+                        widgetNameController.text = widgetName;
+                      });
+                    },
+                  );
+                }).toList(),
               );
-            })
+            }),
           ],
         ),
       ),
