@@ -1,8 +1,8 @@
-
 final Map<String, Map<String, Map<String, String>>> groupedWidgets = {
   "1. Layout": {
     "Container": {
-      "description": "A box model that combines common painting, positioning, and sizing widgets.",
+      "description":
+          "A box model that combines common painting, positioning, and sizing widgets.",
       "syntax": """Container(
   width: 100,
   height: 100,
@@ -60,7 +60,8 @@ final Map<String, Map<String, Map<String, String>>> groupedWidgets = {
 )""",
     },
     "Expanded": {
-      "description": "Expands a child of a Row, Column, or Flex so that the child fills the available space.",
+      "description":
+          "Expands a child of a Row, Column, or Flex so that the child fills the available space.",
       "syntax": """Expanded(
   child: Container(
     color: Colors.red,
@@ -76,7 +77,8 @@ final Map<String, Map<String, Map<String, String>>> groupedWidgets = {
 )""",
     },
     "Align": {
-      "description": "Aligns its child within itself and optionally sizes itself based on the child's size.",
+      "description":
+          "Aligns its child within itself and optionally sizes itself based on the child's size.",
       "syntax": """Align(
   alignment: Alignment.centerRight,
   child: Text('Aligned Right'),
@@ -85,7 +87,8 @@ final Map<String, Map<String, Map<String, String>>> groupedWidgets = {
   },
   "2. Buttons": {
     "ElevatedButton": {
-      "description": "A Material Design elevated button. Use it to add depth to your interface.",
+      "description":
+          "A Material Design elevated button. Use it to add depth to your interface.",
       "syntax": """ElevatedButton(
   onPressed: () {
   print('Pressed');
@@ -94,7 +97,8 @@ final Map<String, Map<String, Map<String, String>>> groupedWidgets = {
 )""",
     },
     "TextButton": {
-      "description": "A Material Design flat button without elevation. Typically used for less prominent actions.",
+      "description":
+          "A Material Design flat button without elevation. Typically used for less prominent actions.",
       "syntax": """TextButton(
   onPressed: () {
     print('Text button pressed');
@@ -112,7 +116,8 @@ final Map<String, Map<String, Map<String, String>>> groupedWidgets = {
 )""",
     },
     "IconButton": {
-      "description": "A Material Design icon button. Often used in AppBar or Toolbar.",
+      "description":
+          "A Material Design icon button. Often used in AppBar or Toolbar.",
       "syntax": """IconButton(
   icon: Icon(Icons.thumb_up),
   onPressed: () {
@@ -121,7 +126,8 @@ final Map<String, Map<String, Map<String, String>>> groupedWidgets = {
 )""",
     },
     "FloatingActionButton": {
-      "description": "A circular button intended for primary actions on a screen.",
+      "description":
+          "A circular button intended for primary actions on a screen.",
       "syntax": """FloatingActionButton(
   onPressed: () {
     print('FAB pressed');
@@ -145,7 +151,8 @@ final Map<String, Map<String, Map<String, String>>> groupedWidgets = {
 )""",
     },
     "PopupMenuButton": {
-      "description": "Shows a menu when pressed and calls onSelected when the menu is dismissed.",
+      "description":
+          "Shows a menu when pressed and calls onSelected when the menu is dismissed.",
       "syntax": """PopupMenuButton<String>(
   onSelected: (String value) {
     print(value);
@@ -165,7 +172,8 @@ final Map<String, Map<String, Map<String, String>>> groupedWidgets = {
   },
   "3. Icons": {
     "Icon": {
-      "description": "A graphical symbol used to represent actions or content. Commonly used in buttons and UI elements.",
+      "description":
+          "A graphical symbol used to represent actions or content. Commonly used in buttons and UI elements.",
       "syntax": """Icon(
   Icons.favorite,
   color: Colors.pink,
@@ -173,7 +181,8 @@ final Map<String, Map<String, Map<String, String>>> groupedWidgets = {
 )""",
     },
     "IconButton": {
-      "description": "A clickable button that contains an icon and triggers an action when pressed.",
+      "description":
+          "A clickable button that contains an icon and triggers an action when pressed.",
       "syntax": """IconButton(
   icon: Icon(Icons.thumb_up),
   color: Colors.blue,
@@ -183,7 +192,8 @@ final Map<String, Map<String, Map<String, String>>> groupedWidgets = {
 )""",
     },
     "Icons": {
-      "description": "A collection of predefined Material Design icons available in Flutter.",
+      "description":
+          "A collection of predefined Material Design icons available in Flutter.",
       "syntax": """// Example usage
 Row(
   children: [
@@ -194,7 +204,8 @@ Row(
 )""",
     },
     "ImageIcon": {
-      "description": "An icon based on an image rather than a glyph from the built-in icon set.",
+      "description":
+          "An icon based on an image rather than a glyph from the built-in icon set.",
       "syntax": """ImageIcon(
   AssetImage('assets/icon.png'),
   size: 30,
@@ -204,7 +215,8 @@ Row(
   },
   "4. Media": {
     "Image": {
-      "description": "A widget that displays an image from various sources such as assets, files, or the internet.",
+      "description":
+          "A widget that displays an image from various sources such as assets, files, or the internet.",
       "syntax": """Image.asset(
   'assets/images/sample.png',
   width: 100,
@@ -213,7 +225,8 @@ Row(
 )""",
     },
     "FadeInImage": {
-      "description": "A widget that displays a placeholder image while the target image loads and fades it in once loaded.",
+      "description":
+          "A widget that displays a placeholder image while the target image loads and fades it in once loaded.",
       "syntax": """FadeInImage.assetNetwork(
   placeholder: 'assets/loading.gif',
   image: 'https://example.com/image.jpg',
@@ -222,20 +235,24 @@ Row(
 )""",
     },
     "VideoPlayer": {
-      "description": "A widget from the `video_player` package that plays video from assets or network.",
-      "syntax": """VideoPlayerController _controller = VideoPlayerController.asset(
+      "description":
+          "A widget from the `video_player` package that plays video from assets or network.",
+      "syntax":
+          """VideoPlayerController _controller = VideoPlayerController.asset(
   'assets/videos/sample.mp4',
 );
 
 VideoPlayer(_controller)""",
     },
     "AudioPlayer": {
-      "description": "Used with packages like `audioplayers`, it plays audio from assets or network sources.",
+      "description":
+          "Used with packages like `audioplayers`, it plays audio from assets or network sources.",
       "syntax": """AudioPlayer audioPlayer = AudioPlayer();
 audioPlayer.play('https://example.com/audio.mp3');""",
     },
     "Camera": {
-      "description": "Accesses and displays a live camera preview using the `camera` package.",
+      "description":
+          "Accesses and displays a live camera preview using the `camera` package.",
       "syntax": """CameraController _controller = CameraController(
   cameras[0],
   ResolutionPreset.high,
@@ -246,7 +263,8 @@ CameraPreview(_controller)""",
   },
   "5. Structure": {
     "Scaffold": {
-      "description": "Implements the basic visual layout structure of the Material Design layout.",
+      "description":
+          "Implements the basic visual layout structure of the Material Design layout.",
       "syntax": """Scaffold(
   appBar: AppBar(title: Text('My App')),
   body: Center(child: Text('Hello World')),
@@ -257,7 +275,8 @@ CameraPreview(_controller)""",
 )""",
     },
     "AppBar": {
-      "description": "A Material Design app bar that can hold titles, icons, and actions.",
+      "description":
+          "A Material Design app bar that can hold titles, icons, and actions.",
       "syntax": """AppBar(
   title: Text('My App'),
   actions: [
@@ -269,13 +288,15 @@ CameraPreview(_controller)""",
 )""",
     },
     "SafeArea": {
-      "description": "Pads its child to avoid intrusions by the operating system (like notches or status bars).",
+      "description":
+          "Pads its child to avoid intrusions by the operating system (like notches or status bars).",
       "syntax": """SafeArea(
   child: Text('Inside safe area'),
 )""",
     },
     "MaterialApp": {
-      "description": "Wraps several widgets that are commonly required for material design applications.",
+      "description":
+          "Wraps several widgets that are commonly required for material design applications.",
       "syntax": """MaterialApp(
   title: 'My App',
   theme: ThemeData(primarySwatch: Colors.blue),
@@ -283,7 +304,8 @@ CameraPreview(_controller)""",
 )""",
     },
     "CupertinoApp": {
-      "description": "An iOS-styled application that uses Cupertino design widgets.",
+      "description":
+          "An iOS-styled application that uses Cupertino design widgets.",
       "syntax": """CupertinoApp(
   title: 'iOS App',
   home: CupertinoPageScaffold(
@@ -306,7 +328,8 @@ CameraPreview(_controller)""",
 )""",
     },
     "TextFormField": {
-      "description": "A FormField that contains a TextField and integrates with form validation.",
+      "description":
+          "A FormField that contains a TextField and integrates with form validation.",
       "syntax": """TextFormField(
   decoration: InputDecoration(
     labelText: 'Email',
@@ -418,7 +441,8 @@ CameraPreview(_controller)""",
 )""",
     },
     "Spacer": {
-      "description": "Creates adjustable space between widgets in Flex widgets like Row or Column.",
+      "description":
+          "Creates adjustable space between widgets in Flex widgets like Row or Column.",
       "syntax": """Row(
   children: [
     Icon(Icons.star),
@@ -428,7 +452,8 @@ CameraPreview(_controller)""",
 )""",
     },
     "Expanded": {
-      "description": "Expands a child of a Row, Column, or Flex to fill the available space.",
+      "description":
+          "Expands a child of a Row, Column, or Flex to fill the available space.",
       "syntax": """Row(
   children: [
     Expanded(
@@ -452,7 +477,8 @@ CameraPreview(_controller)""",
   },
   "8. Interaction": {
     "GestureDetector": {
-      "description": "A widget that detects gestures like taps, drags, and swipes.",
+      "description":
+          "A widget that detects gestures like taps, drags, and swipes.",
       "syntax": """GestureDetector(
   onTap: () {
     print('Tapped!');
@@ -465,7 +491,8 @@ CameraPreview(_controller)""",
 )""",
     },
     "InkWell": {
-      "description": "A material design ripple effect on touch (must be inside Material).",
+      "description":
+          "A material design ripple effect on touch (must be inside Material).",
       "syntax": """InkWell(
   onTap: () {
     print('Tapped InkWell');
@@ -506,7 +533,8 @@ CameraPreview(_controller)""",
 )""",
     },
     "DragTarget": {
-      "description": "Receives data when a draggable widget is dropped onto it.",
+      "description":
+          "Receives data when a draggable widget is dropped onto it.",
       "syntax": """DragTarget<String>(
   builder: (context, candidateData, rejectedData) {
     return Container(
@@ -547,7 +575,8 @@ CameraPreview(_controller)""",
   },
   "9. Display": {
     "Text": {
-      "description": "A widget that displays a string of text with single style.",
+      "description":
+          "A widget that displays a string of text with single style.",
       "syntax": """Text(
   'Hello, Flutter!',
   style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
@@ -569,7 +598,8 @@ CameraPreview(_controller)""",
 )""",
     },
     "ListTile": {
-      "description": "A single fixed-height row that typically contains text and icons.",
+      "description":
+          "A single fixed-height row that typically contains text and icons.",
       "syntax": """ListTile(
   leading: Icon(Icons.person),
   title: Text('John Doe'),
@@ -579,7 +609,8 @@ CameraPreview(_controller)""",
 )""",
     },
     "Card": {
-      "description": "A material design card: a panel with slightly rounded corners and elevation.",
+      "description":
+          "A material design card: a panel with slightly rounded corners and elevation.",
       "syntax": """Card(
   elevation: 4,
   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
@@ -590,7 +621,8 @@ CameraPreview(_controller)""",
 )""",
     },
     "Tooltip": {
-      "description": "Displays a message when the widget is long-pressed or hovered.",
+      "description":
+          "Displays a message when the widget is long-pressed or hovered.",
       "syntax": """Tooltip(
   message: 'This is a tooltip',
   child: Icon(Icons.info),
@@ -604,7 +636,8 @@ CameraPreview(_controller)""",
 )""",
     },
     "Chip": {
-      "description": "A material design chip, often used for tags or contact elements.",
+      "description":
+          "A material design chip, often used for tags or contact elements.",
       "syntax": """Chip(
   avatar: CircleAvatar(
     backgroundColor: Colors.grey.shade800,
@@ -621,7 +654,8 @@ CameraPreview(_controller)""",
 )""",
     },
     "Badge": {
-      "description": "Displays a small badge (requires external packages like badges).",
+      "description":
+          "Displays a small badge (requires external packages like badges).",
       "syntax": """Badge(
   label: Text('3'),
   child: Icon(Icons.notifications),
@@ -630,7 +664,8 @@ CameraPreview(_controller)""",
   },
   "10. Dialogs": {
     "AlertDialog": {
-      "description": "A material design alert dialog. Can have a title, content, and actions.",
+      "description":
+          "A material design alert dialog. Can have a title, content, and actions.",
       "syntax": """showDialog(
   context: context,
   builder: (context) => AlertDialog(
@@ -669,7 +704,8 @@ CameraPreview(_controller)""",
 );""",
     },
     "Dialog": {
-      "description": "The base class for all dialogs. You can create custom dialogs with this.",
+      "description":
+          "The base class for all dialogs. You can create custom dialogs with this.",
       "syntax": """showDialog(
   context: context,
   builder: (context) => Dialog(
@@ -692,7 +728,8 @@ CameraPreview(_controller)""",
 );""",
     },
     "BottomSheet": {
-      "description": "A material design bottom sheet. Can be modal or persistent.",
+      "description":
+          "A material design bottom sheet. Can be modal or persistent.",
       "syntax": """showModalBottomSheet(
   context: context,
   builder: (context) => Container(
@@ -711,7 +748,8 @@ CameraPreview(_controller)""",
 );""",
     },
     "SnackBar": {
-      "description": "A lightweight message with an optional action that briefly appears at the bottom.",
+      "description":
+          "A lightweight message with an optional action that briefly appears at the bottom.",
       "syntax": """ScaffoldMessenger.of(context).showSnackBar(
   SnackBar(
     content: Text('This is a snackbar'),
@@ -723,9 +761,10 @@ CameraPreview(_controller)""",
 );""",
     },
   },
-  "Forms": {
+  "11. Forms": {
     "Form": {
-      "description": "A container for form fields. Used to validate and save multiple form fields together.",
+      "description":
+          "A container for form fields. Used to validate and save multiple form fields together.",
       "syntax": """final _formKey = GlobalKey<FormState>();
 
 Form(
@@ -754,7 +793,8 @@ Form(
 );""",
     },
     "FormField": {
-      "description": "A single form field widget that can manage its own state and validation.",
+      "description":
+          "A single form field widget that can manage its own state and validation.",
       "syntax": """FormField<String>(
   validator: (value) {
     if (value == null || value.isEmpty) {
@@ -775,7 +815,8 @@ Form(
 );""",
     },
     "TextFormField": {
-      "description": "A FormField that contains a TextField. Supports validation and saving.",
+      "description":
+          "A FormField that contains a TextField. Supports validation and saving.",
       "syntax": """TextFormField(
   decoration: InputDecoration(labelText: 'Email'),
   keyboardType: TextInputType.emailAddress,
@@ -802,7 +843,8 @@ Form(
 );""",
     },
     "CheckboxFormField": {
-      "description": "Custom FormField to manage a checkbox. (Not built-in, usually a custom implementation)",
+      "description":
+          "Custom FormField to manage a checkbox. (Not built-in, usually a custom implementation)",
       "syntax": """// Example of custom checkbox in a form
 FormField<bool>(
   initialValue: false,
@@ -826,9 +868,10 @@ FormField<bool>(
 );""",
     },
   },
-  "Navigation": {
+  "12. Navigation": {
     "Navigator": {
-      "description": "Manages a stack of Route objects with push and pop operations for screen navigation.",
+      "description":
+          "Manages a stack of Route objects with push and pop operations for screen navigation.",
       "syntax": """// Push to a new screen
 Navigator.push(
   context,
@@ -839,14 +882,16 @@ Navigator.push(
 Navigator.pop(context);""",
     },
     "MaterialPageRoute": {
-      "description": "A route that uses a Material-style page transition. Typically used with Navigator.push.",
+      "description":
+          "A route that uses a Material-style page transition. Typically used with Navigator.push.",
       "syntax": """Navigator.push(
   context,
   MaterialPageRoute(builder: (context) => SecondPage()),
 );""",
     },
     "Routes (Named)": {
-      "description": "Defines routes by name for organized and centralized navigation.",
+      "description":
+          "Defines routes by name for organized and centralized navigation.",
       "syntax": """// In MaterialApp
 MaterialApp(
   initialRoute: '/',
@@ -860,7 +905,8 @@ MaterialApp(
 Navigator.pushNamed(context, '/second');""",
     },
     "BottomNavigationBar": {
-      "description": "Displays a bar at the bottom for switching between views.",
+      "description":
+          "Displays a bar at the bottom for switching between views.",
       "syntax": """BottomNavigationBar(
   currentIndex: _selectedIndex,
   onTap: (index) {
@@ -881,7 +927,8 @@ Navigator.pushNamed(context, '/second');""",
 );""",
     },
     "Drawer": {
-      "description": "A panel that slides in from the side for navigation and other actions.",
+      "description":
+          "A panel that slides in from the side for navigation and other actions.",
       "syntax": """Scaffold(
   drawer: Drawer(
     child: ListView(
@@ -902,7 +949,8 @@ Navigator.pushNamed(context, '/second');""",
 );""",
     },
     "TabBar": {
-      "description": "A horizontal bar of tabs for switching between pages or views.",
+      "description":
+          "A horizontal bar of tabs for switching between pages or views.",
       "syntax": """DefaultTabController(
   length: 3,
   child: Scaffold(
@@ -927,7 +975,8 @@ Navigator.pushNamed(context, '/second');""",
 );""",
     },
     "PageView": {
-      "description": "A scrollable list of pages that can be swiped horizontally or vertically.",
+      "description":
+          "A scrollable list of pages that can be swiped horizontally or vertically.",
       "syntax": """PageView(
   children: [
     Container(color: Colors.red),
@@ -937,9 +986,10 @@ Navigator.pushNamed(context, '/second');""",
 );""",
     },
   },
-  "Builders": {
+  "13. Builders": {
     "Builder": {
-      "description": "Creates a new context for building a widget subtree. Useful for accessing ancestor context values.",
+      "description":
+          "Creates a new context for building a widget subtree. Useful for accessing ancestor context values.",
       "syntax": """Builder(
   builder: (BuildContext context) {
     return ElevatedButton(
@@ -953,7 +1003,8 @@ Navigator.pushNamed(context, '/second');""",
 );""",
     },
     "FutureBuilder": {
-      "description": "Builds itself based on the latest snapshot of interaction with a Future.",
+      "description":
+          "Builds itself based on the latest snapshot of interaction with a Future.",
       "syntax": """FutureBuilder<String>(
   future: fetchData(),
   builder: (context, snapshot) {
@@ -968,7 +1019,8 @@ Navigator.pushNamed(context, '/second');""",
 );""",
     },
     "StreamBuilder": {
-      "description": "Builds itself based on the latest snapshot of interaction with a Stream.",
+      "description":
+          "Builds itself based on the latest snapshot of interaction with a Stream.",
       "syntax": """StreamBuilder<int>(
   stream: Stream.periodic(Duration(seconds: 1), (count) => count),
   builder: (context, snapshot) {
@@ -981,7 +1033,8 @@ Navigator.pushNamed(context, '/second');""",
 );""",
     },
     "LayoutBuilder": {
-      "description": "Builds a widget tree based on the parent widget's constraints.",
+      "description":
+          "Builds a widget tree based on the parent widget's constraints.",
       "syntax": """LayoutBuilder(
   builder: (context, constraints) {
     if (constraints.maxWidth > 600) {
@@ -993,7 +1046,8 @@ Navigator.pushNamed(context, '/second');""",
 );""",
     },
     "AnimatedBuilder": {
-      "description": "Rebuilds a widget tree when an animation changes. Useful for complex animations.",
+      "description":
+          "Rebuilds a widget tree when an animation changes. Useful for complex animations.",
       "syntax": """AnimatedBuilder(
   animation: _controller,
   builder: (context, child) {
@@ -1024,9 +1078,10 @@ Navigator.pushNamed(context, '/second');""",
 );""",
     },
   },
-  "Animations": {
+  "14. Animations": {
     "AnimatedContainer": {
-      "description": "A container that automatically animates between old and new values when they change.",
+      "description":
+          "A container that automatically animates between old and new values when they change.",
       "syntax": """AnimatedContainer(
   duration: Duration(seconds: 1),
   width: isSelected ? 200.0 : 100.0,
@@ -1044,7 +1099,8 @@ Navigator.pushNamed(context, '/second');""",
 );""",
     },
     "AnimatedCrossFade": {
-      "description": "Cross-fades between two children and animates the size and fade.",
+      "description":
+          "Cross-fades between two children and animates the size and fade.",
       "syntax": """AnimatedCrossFade(
   firstChild: Text('First'),
   secondChild: Text('Second'),
@@ -1053,7 +1109,8 @@ Navigator.pushNamed(context, '/second');""",
 );""",
     },
     "AnimatedSwitcher": {
-      "description": "Switches between widgets with a fade or custom transition.",
+      "description":
+          "Switches between widgets with a fade or custom transition.",
       "syntax": """AnimatedSwitcher(
   duration: Duration(seconds: 1),
   child: _showFirst
@@ -1062,7 +1119,8 @@ Navigator.pushNamed(context, '/second');""",
 );""",
     },
     "AnimatedBuilder": {
-      "description": "Useful for building widgets with animation and avoiding rebuilds of static child widgets.",
+      "description":
+          "Useful for building widgets with animation and avoiding rebuilds of static child widgets.",
       "syntax": """AnimatedBuilder(
   animation: _controller,
   builder: (context, child) {
@@ -1075,7 +1133,8 @@ Navigator.pushNamed(context, '/second');""",
 );""",
     },
     "AnimatedIcon": {
-      "description": "An icon that can animate between predefined pairs of icons.",
+      "description":
+          "An icon that can animate between predefined pairs of icons.",
       "syntax": """AnimatedIcon(
   icon: AnimatedIcons.menu_close,
   progress: _controller,
@@ -1096,7 +1155,8 @@ Navigator.pushNamed(context, '/second');""",
 );""",
     },
     "SlideTransition": {
-      "description": "Animates a widget's position relative to its normal position.",
+      "description":
+          "Animates a widget's position relative to its normal position.",
       "syntax": """SlideTransition(
   position: _offsetAnimation,
   child: Text('Slide Me'),
@@ -1118,7 +1178,8 @@ Navigator.pushNamed(context, '/second');""",
 );""",
     },
     "PositionedTransition": {
-      "description": "Animated version of Positioned that transitions its position over time.",
+      "description":
+          "Animated version of Positioned that transitions its position over time.",
       "syntax": """PositionedTransition(
   rect: _relativeRectAnimation,
   child: Container(color: Colors.blue, width: 100, height: 100),
@@ -1153,7 +1214,7 @@ Navigator.pushNamed(context, '/second');""",
 );""",
     },
   },
-  "Lists & Grids":{
+  "15. Lists & Grids": {
     "ListView": {
       "description": "A scrollable list of widgets arranged linearly.",
       "syntax": """ListView(
@@ -1164,7 +1225,8 @@ Navigator.pushNamed(context, '/second');""",
 )""",
     },
     "ListView.builder": {
-      "description": "A scrollable, lazily built list based on a builder function.",
+      "description":
+          "A scrollable, lazily built list based on a builder function.",
       "syntax": """ListView.builder(
   itemCount: 10,
   itemBuilder: (context, index) {
@@ -1194,7 +1256,8 @@ Navigator.pushNamed(context, '/second');""",
 )""",
     },
     "GridView.builder": {
-      "description": "A scrollable, lazily built grid using a builder function.",
+      "description":
+          "A scrollable, lazily built grid using a builder function.",
       "syntax": """GridView.builder(
   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
     crossAxisCount: 2,
@@ -1208,7 +1271,8 @@ Navigator.pushNamed(context, '/second');""",
 )""",
     },
     "ListTile": {
-      "description": "A single fixed-height row that typically contains some text and an optional icon.",
+      "description":
+          "A single fixed-height row that typically contains some text and an optional icon.",
       "syntax": """ListTile(
   leading: Icon(Icons.account_circle),
   title: Text('Title'),
@@ -1217,9 +1281,10 @@ Navigator.pushNamed(context, '/second');""",
 )""",
     },
   },
-  "Scrolling Widgets":{
+  "16. Scrolling Widgets": {
     "SingleChildScrollView": {
-      "description": "A box in which a single widget can be scrolled. Useful for vertical or horizontal scrolling of a single child.",
+      "description":
+          "A box in which a single widget can be scrolled. Useful for vertical or horizontal scrolling of a single child.",
       "syntax": """SingleChildScrollView(
   child: Column(
     children: [
@@ -1230,7 +1295,8 @@ Navigator.pushNamed(context, '/second');""",
 )""",
     },
     "ListView": {
-      "description": "A scrollable list of widgets arranged linearly. It can scroll vertically or horizontally.",
+      "description":
+          "A scrollable list of widgets arranged linearly. It can scroll vertically or horizontally.",
       "syntax": """ListView(
   children: [
     Text('Item 1'),
@@ -1239,7 +1305,8 @@ Navigator.pushNamed(context, '/second');""",
 )""",
     },
     "GridView": {
-      "description": "A scrollable 2D array of widgets. Supports lazy loading and scrolling in two directions.",
+      "description":
+          "A scrollable 2D array of widgets. Supports lazy loading and scrolling in two directions.",
       "syntax": """GridView.count(
   crossAxisCount: 2,
   children: List.generate(4, (index) {
@@ -1248,7 +1315,8 @@ Navigator.pushNamed(context, '/second');""",
 )""",
     },
     "PageView": {
-      "description": "A scrollable list that works page by page, like a carousel.",
+      "description":
+          "A scrollable list that works page by page, like a carousel.",
       "syntax": """PageView(
   children: [
     Container(color: Colors.red),
@@ -1257,7 +1325,8 @@ Navigator.pushNamed(context, '/second');""",
 )""",
     },
     "Scrollbar": {
-      "description": "A Material Design scrollbar. Wrap around scrollable widgets to show a draggable scrollbar.",
+      "description":
+          "A Material Design scrollbar. Wrap around scrollable widgets to show a draggable scrollbar.",
       "syntax": """Scrollbar(
   child: ListView.builder(
     itemCount: 20,
@@ -1266,7 +1335,8 @@ Navigator.pushNamed(context, '/second');""",
 )""",
     },
     "CustomScrollView": {
-      "description": "A ScrollView that creates custom scroll effects using slivers.",
+      "description":
+          "A ScrollView that creates custom scroll effects using slivers.",
       "syntax": """CustomScrollView(
   slivers: [
     SliverAppBar(
@@ -1284,7 +1354,8 @@ Navigator.pushNamed(context, '/second');""",
 )""",
     },
     "NestedScrollView": {
-      "description": "A scrolling view that integrates with a nested scrollable area like a SliverAppBar and TabBarView.",
+      "description":
+          "A scrolling view that integrates with a nested scrollable area like a SliverAppBar and TabBarView.",
       "syntax": """NestedScrollView(
   headerSliverBuilder: (context, innerBoxIsScrolled) => [
     SliverAppBar(
@@ -1301,22 +1372,25 @@ Navigator.pushNamed(context, '/second');""",
 )""",
     },
   },
-  "Accessibility":{
+  "17. Accessibility": {
     "Semantics": {
-      "description": "A widget that annotates the widget tree with a description of the meaning of the widgets. Used by accessibility tools like screen readers.",
+      "description":
+          "A widget that annotates the widget tree with a description of the meaning of the widgets. Used by accessibility tools like screen readers.",
       "syntax": """Semantics(
   label: 'Play Button',
   child: Icon(Icons.play_arrow),
 )""",
     },
     "ExcludeSemantics": {
-      "description": "A widget that excludes its subtree from the semantics tree. Useful when combining multiple widgets into one accessible unit.",
+      "description":
+          "A widget that excludes its subtree from the semantics tree. Useful when combining multiple widgets into one accessible unit.",
       "syntax": """ExcludeSemantics(
   child: Text('This text will be hidden from accessibility tools'),
 )""",
     },
     "MergeSemantics": {
-      "description": "A widget that merges the semantics of its descendants into a single node. Useful for combining separate widgets into one accessible unit.",
+      "description":
+          "A widget that merges the semantics of its descendants into a single node. Useful for combining separate widgets into one accessible unit.",
       "syntax": """MergeSemantics(
   child: Row(
     children: [
@@ -1327,7 +1401,8 @@ Navigator.pushNamed(context, '/second');""",
 )""",
     },
     "BlockSemantics": {
-      "description": "A widget that prevents semantics from propagating to its ancestors. Useful when showing modal elements like dialogs.",
+      "description":
+          "A widget that prevents semantics from propagating to its ancestors. Useful when showing modal elements like dialogs.",
       "syntax": """BlockSemantics(
   child: AlertDialog(
     title: Text('Alert'),
@@ -1337,9 +1412,10 @@ Navigator.pushNamed(context, '/second');""",
 )""",
     },
   },
-  "State Management": {
+  "18. State Management": {
     "StatelessWidget": {
-      "description": "A widget that describes part of the UI that does not depend on any mutable state.",
+      "description":
+          "A widget that describes part of the UI that does not depend on any mutable state.",
       "syntax": """class MyWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -1350,7 +1426,8 @@ Navigator.pushNamed(context, '/second');""",
 }""",
     },
     "StatefulWidget": {
-      "description": "A widget that has mutable state which can change during the lifetime of the widget.",
+      "description":
+          "A widget that has mutable state which can change during the lifetime of the widget.",
       "syntax": """class MyWidget extends StatefulWidget {
   @override
   _MyWidgetState createState() => _MyWidgetState();
@@ -1377,13 +1454,15 @@ class _MyWidgetState extends State<MyWidget> {
 }""",
     },
     "setState": {
-      "description": "Used to tell the Flutter framework that the internal state of this object has changed.",
+      "description":
+          "Used to tell the Flutter framework that the internal state of this object has changed.",
       "syntax": """setState(() {
   counter++;
 });""",
     },
     "InheritedWidget": {
-      "description": "A widget that allows data to be passed down the widget tree efficiently.",
+      "description":
+          "A widget that allows data to be passed down the widget tree efficiently.",
       "syntax": """class MyInheritedWidget extends InheritedWidget {
   final int data;
 
@@ -1402,7 +1481,8 @@ class _MyWidgetState extends State<MyWidget> {
 }""",
     },
     "Provider": {
-      "description": "A wrapper around InheritedWidget to make state management simpler and scalable (requires `provider` package).",
+      "description":
+          "A wrapper around InheritedWidget to make state management simpler and scalable (requires `provider` package).",
       "syntax": """ChangeNotifierProvider(
   create: (_) => CounterModel(),
   child: MyApp(),
@@ -1438,7 +1518,8 @@ ValueListenableBuilder<int>(
 counter.value++;""",
     },
     "Bloc": {
-      "description": "A predictable state management library based on streams (requires `flutter_bloc` package).",
+      "description":
+          "A predictable state management library based on streams (requires `flutter_bloc` package).",
       "syntax": """BlocProvider(
   create: (_) => CounterBloc(),
   child: CounterPage(),
@@ -1457,22 +1538,25 @@ BlocBuilder<CounterBloc, int>(
 )""",
     },
   },
-  "Theming & Styling":{
+  "19. Theming & Styling": {
     "Semantics": {
-      "description": "A widget that annotates the widget tree with a description of the meaning of the widgets. Used by accessibility tools like screen readers.",
+      "description":
+          "A widget that annotates the widget tree with a description of the meaning of the widgets. Used by accessibility tools like screen readers.",
       "syntax": """Semantics(
   label: 'Play Button',
   child: Icon(Icons.play_arrow),
 )""",
     },
     "ExcludeSemantics": {
-      "description": "A widget that excludes its subtree from the semantics tree. Useful when combining multiple widgets into one accessible unit.",
+      "description":
+          "A widget that excludes its subtree from the semantics tree. Useful when combining multiple widgets into one accessible unit.",
       "syntax": """ExcludeSemantics(
   child: Text('This text will be hidden from accessibility tools'),
 )""",
     },
     "MergeSemantics": {
-      "description": "A widget that merges the semantics of its descendants into a single node. Useful for combining separate widgets into one accessible unit.",
+      "description":
+          "A widget that merges the semantics of its descendants into a single node. Useful for combining separate widgets into one accessible unit.",
       "syntax": """MergeSemantics(
   child: Row(
     children: [
@@ -1483,7 +1567,8 @@ BlocBuilder<CounterBloc, int>(
 )""",
     },
     "BlockSemantics": {
-      "description": "A widget that prevents semantics from propagating to its ancestors. Useful when showing modal elements like dialogs.",
+      "description":
+          "A widget that prevents semantics from propagating to its ancestors. Useful when showing modal elements like dialogs.",
       "syntax": """BlockSemantics(
   child: AlertDialog(
     title: Text('Alert'),
@@ -1493,16 +1578,18 @@ BlocBuilder<CounterBloc, int>(
 )""",
     },
   },
-  "Testing & Debugging":{
+  "20. Testing & Debugging": {
     "DebugBanner": {
-      "description": "The debug banner appears in debug mode to show that the app is not in release mode. It can be turned off.",
+      "description":
+          "The debug banner appears in debug mode to show that the app is not in release mode. It can be turned off.",
       "syntax": """MaterialApp(
   debugShowCheckedModeBanner: false,
   home: MyHomePage(),
 )""",
     },
     "Banner": {
-      "description": "Displays a diagonal message over other widgets to indicate status (e.g., debug mode).",
+      "description":
+          "Displays a diagonal message over other widgets to indicate status (e.g., debug mode).",
       "syntax": """Banner(
   message: "DEBUG",
   location: BannerLocation.topEnd,
@@ -1511,41 +1598,48 @@ BlocBuilder<CounterBloc, int>(
 )""",
     },
     "SemanticsDebugger": {
-      "description": "Inspects the semantics (accessibility) tree and overlays helpful debugging information on the UI.",
+      "description":
+          "Inspects the semantics (accessibility) tree and overlays helpful debugging information on the UI.",
       "syntax": """SemanticsDebugger(
   child: MyApp(),
 )""",
     },
     "WidgetInspector": {
-      "description": "Used internally by Flutter DevTools to allow interactive widget inspection.",
+      "description":
+          "Used internally by Flutter DevTools to allow interactive widget inspection.",
       "syntax": """WidgetInspector(
   child: MyApp(),
 )""",
     },
     "ErrorWidget": {
-      "description": "Displays error messages when a build fails. You can customize the default error UI.",
+      "description":
+          "Displays error messages when a build fails. You can customize the default error UI.",
       "syntax": """ErrorWidget.builder = (FlutterErrorDetails details) {
   return Center(child: Text('Oops! Something went wrong.'));
 };""",
     },
     "FlutterError": {
-      "description": "Captures errors during Flutter framework execution and reports to the console or error handler.",
+      "description":
+          "Captures errors during Flutter framework execution and reports to the console or error handler.",
       "syntax": """FlutterError.onError = (FlutterErrorDetails details) {
   FlutterError.presentError(details);
 };""",
     },
     "print": {
-      "description": "Used for logging messages to the console during development and debugging.",
+      "description":
+          "Used for logging messages to the console during development and debugging.",
       "syntax": """print('This is a debug message');""",
     },
     "assert": {
-      "description": "Used to set up conditions that must be true during development. These checks are removed in release builds.",
+      "description":
+          "Used to set up conditions that must be true during development. These checks are removed in release builds.",
       "syntax": """assert(myList.isNotEmpty, 'List should not be empty');""",
     },
   },
-  "Async & Futures":{
+  "21. Async & Futures": {
     "FutureBuilder": {
-      "description": "Builds a widget based on the latest snapshot of interaction with a `Future`. Useful for asynchronous operations.",
+      "description":
+          "Builds a widget based on the latest snapshot of interaction with a `Future`. Useful for asynchronous operations.",
       "syntax": """FutureBuilder<String>(
   future: fetchData(),
   builder: (context, snapshot) {
@@ -1560,7 +1654,8 @@ BlocBuilder<CounterBloc, int>(
 )""",
     },
     "StreamBuilder": {
-      "description": "Builds a widget based on the latest snapshot of interaction with a `Stream`. Useful for real-time data.",
+      "description":
+          "Builds a widget based on the latest snapshot of interaction with a `Stream`. Useful for real-time data.",
       "syntax": """StreamBuilder<int>(
   stream: counterStream(),
   builder: (context, snapshot) {
@@ -1575,7 +1670,8 @@ BlocBuilder<CounterBloc, int>(
 )""",
     },
     "AsyncSnapshot": {
-      "description": "Represents the current state of interaction with a Future or Stream, used within `FutureBuilder` or `StreamBuilder`.",
+      "description":
+          "Represents the current state of interaction with a Future or Stream, used within `FutureBuilder` or `StreamBuilder`.",
       "syntax": """builder: (context, AsyncSnapshot<String> snapshot) {
   if (snapshot.connectionState == ConnectionState.done) {
     return Text('Done: \${snapshot.data}');
@@ -1584,15 +1680,17 @@ BlocBuilder<CounterBloc, int>(
 }""",
     },
     "ConnectionState": {
-      "description": "Indicates the connection state of an asynchronous computation (none, waiting, active, done).",
+      "description":
+          "Indicates the connection state of an asynchronous computation (none, waiting, active, done).",
       "syntax": """if (snapshot.connectionState == ConnectionState.waiting) {
   return CircularProgressIndicator();
 }""",
     },
   },
-  "Assets & Images":{
+  "22. Assets & Images": {
     "Image": {
-      "description": "A widget that displays an image. It supports various sources such as assets, files, memory, or network.",
+      "description":
+          "A widget that displays an image. It supports various sources such as assets, files, memory, or network.",
       "syntax": """Image.asset('assets/images/logo.png')""",
     },
     "Image.asset": {
@@ -1630,7 +1728,8 @@ BlocBuilder<CounterBloc, int>(
 )""",
     },
     "FadeInImage": {
-      "description": "A widget that displays a placeholder image until the target image is loaded.",
+      "description":
+          "A widget that displays a placeholder image until the target image is loaded.",
       "syntax": """FadeInImage.assetNetwork(
   placeholder: 'assets/loading.gif',
   image: 'https://example.com/image.jpg',
@@ -1655,9 +1754,10 @@ BlocBuilder<CounterBloc, int>(
       "syntax": """MemoryImage(bytes)""",
     },
   },
-  "Cupertino Widgets":{
+  "23. Cupertino Widgets": {
     "CupertinoApp": {
-      "description": "An iOS-style application wrapper that defines the app’s structure and themes.",
+      "description":
+          "An iOS-style application wrapper that defines the app’s structure and themes.",
       "syntax": """CupertinoApp(
   home: CupertinoPageScaffold(
     navigationBar: CupertinoNavigationBar(
@@ -1668,7 +1768,8 @@ BlocBuilder<CounterBloc, int>(
 );""",
     },
     "CupertinoPageScaffold": {
-      "description": "An iOS-style page layout with navigation bar and content area.",
+      "description":
+          "An iOS-style page layout with navigation bar and content area.",
       "syntax": """CupertinoPageScaffold(
   navigationBar: CupertinoNavigationBar(
     middle: Text('Page Title'),
@@ -1677,13 +1778,15 @@ BlocBuilder<CounterBloc, int>(
 );""",
     },
     "CupertinoNavigationBar": {
-      "description": "An iOS-style navigation bar with a middle title and optional leading/trailing widgets.",
+      "description":
+          "An iOS-style navigation bar with a middle title and optional leading/trailing widgets.",
       "syntax": """CupertinoNavigationBar(
   middle: Text('Cupertino App'),
 );""",
     },
     "CupertinoButton": {
-      "description": "An iOS-style button that responds to touches by filling with color.",
+      "description":
+          "An iOS-style button that responds to touches by filling with color.",
       "syntax": """CupertinoButton(
   color: CupertinoColors.activeBlue,
   child: Text('Press'),
@@ -1697,7 +1800,8 @@ BlocBuilder<CounterBloc, int>(
 );""",
     },
     "CupertinoAlertDialog": {
-      "description": "An iOS-style alert dialog with title, content, and actions.",
+      "description":
+          "An iOS-style alert dialog with title, content, and actions.",
       "syntax": """CupertinoAlertDialog(
   title: Text('Alert'),
   content: Text('This is an alert dialog'),
@@ -1736,7 +1840,8 @@ BlocBuilder<CounterBloc, int>(
 );""",
     },
     "CupertinoSlider": {
-      "description": "An iOS-style slider control for selecting a value from a range.",
+      "description":
+          "An iOS-style slider control for selecting a value from a range.",
       "syntax": """CupertinoSlider(
   value: _value,
   min: 0.0,
@@ -1792,7 +1897,7 @@ BlocBuilder<CounterBloc, int>(
 );""",
     },
   },
-  "Painting & Effects": {
+  "24. Painting & Effects": {
     "Opacity": {
       "description": "Makes its child partially transparent.",
       "syntax": """Opacity(
@@ -1801,7 +1906,8 @@ BlocBuilder<CounterBloc, int>(
 )""",
     },
     "Transform": {
-      "description": "Applies a transformation (e.g., rotate, scale) to its child.",
+      "description":
+          "Applies a transformation (e.g., rotate, scale) to its child.",
       "syntax": """Transform.rotate(
   angle: math.pi / 4,
   child: Container(
@@ -1812,7 +1918,8 @@ BlocBuilder<CounterBloc, int>(
 )""",
     },
     "BackdropFilter": {
-      "description": "Applies a filter to the existing painted content and then paints the child.",
+      "description":
+          "Applies a filter to the existing painted content and then paints the child.",
       "syntax": """BackdropFilter(
   filter: ImageFilter.blur(sigmaX: 5.0, sigmaY: 5.0),
   child: Container(
@@ -1834,7 +1941,8 @@ BlocBuilder<CounterBloc, int>(
 )""",
     },
     "CustomPaint": {
-      "description": "Provides a canvas on which to draw during the paint phase.",
+      "description":
+          "Provides a canvas on which to draw during the paint phase.",
       "syntax": """CustomPaint(
   painter: MyPainter(),
   child: Container(),
@@ -1852,5 +1960,4 @@ BlocBuilder<CounterBloc, int>(
 )""",
     },
   },
-
 };
